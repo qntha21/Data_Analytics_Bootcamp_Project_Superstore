@@ -1,37 +1,34 @@
-# Data_Analytics_Bootcamp_Project_Superstore
-Bootcamp project analyzing Superstore profitability by region using  Python &amp; Tableau. Key finding: discounts above 20% always generate  losses. Central region's 24% avg discount explains its poor 7.9%  margin vs West's 14.9%. Potential profit recovery: +$197K (+68%).
+# Superstore Profitability & Discount Analysis
 
-## Superstore Regional Profitability & Discount Analysis
+## Overview
+Built 3 interactive Tableau dashboards to answer: where should Superstore focus to maximize profit? Covered regional performance, category profitability, and the quantified impact of discount levels with strategic recommendations per region.
 
-This project is the capstone dashboard assignment from the Dibimbing 
-Data Analytics Offline Bootcamp (Batch #3), built using Python and 
-Tableau Public on the Sample Superstore dataset (2014–2017).
+## Problem Statement
+Despite overall profitability, $156,131 is lost annually to excessive discounting. 1,871 orders (19.4%) generate a loss. Central region applies a 30% average discount on Furniture vs. West's 13%, a structural difference that explains most of the profitability gap between regions.
 
-The analysis began during Exploratory Data Analysis in Python, where 
-a significant profitability gap was discovered across US regions — 
-confirmed statistically via ANOVA testing (p = 0.049) and a 
-Coefficient of Variation of 25.07%. This finding motivated a 
-regional lens to investigate where and why the business was losing 
-money despite overall healthy performance ($2.3M Sales, 12.47% 
-Profit Margin).
+## Dataset
+- **Source:** Sample Superstore dataset
+- **Size:** 9,994 orders × 21 columns
+- **Period:** 2014–2017, 4 US regions (West, East, Central, South)
+- **Key columns:** Region/State/City, Category/Sub-Category, Sales, Profit, Discount
 
-The core finding: any discount above 20% consistently generates 
-losses (-$45 to -$156 per order), yet Central region applies an 
-average discount of 24% — placing the majority of its orders 
-structurally in the loss zone. West region, by contrast, maintains 
-an 11% average discount and achieves a 14.9% profit margin. Michigan 
-(Central region) proves geography is not destiny — with 1% discount 
-it achieves 32% margin.
+## Key Findings
+- **KPIs:** $2.3M total sales · 12.47% profit margin · 15.62% avg discount · 1,871 loss orders
+- **Discount impact per order:** 0% → +$66.90 · 1–10% → +$96.06 · 11–20% → +$24.74 · 21–30% → **-$45.68** · 31–50% → **-$156.28**
+- **By region:** West leads (14.9% margin, 9.9% loss orders); Central is worst (7.9% margin, 31.9% loss orders)
+- **By sub-category:** Tables is the biggest loss-maker (-$17,725); Copiers is most profitable (+$55,618)
+- Texas and Illinois show high sales but negative profit, a pattern invisible without dashboard-level analysis
 
-Three interactive Tableau dashboards were built to tell this story: 
-a Regional Overview (KPIs, map, trend, scatter), a Regional Sales 
-Analysis (bar chart, treemap), and a Profitability & Discount 
-Analysis (sub-category bar, margin dot plot, discount heatmap, 
-discount-profit bar). The analysis concludes with data-backed 
-tailored recommendations for each of the four regions, with a 
-potential profit recovery of +$197,000 (+68%) through discount 
-policy reform alone.
+## Recommendations by Region
+- **West (Star Performer):** Scale marketing budget 30–40%; replicate its 11% discount model company-wide
+- **East (High Performer):** Hold discount rate at a 15% cap
+- **South (Needs Attention):** Stop discount increases; prioritize efficiency over expansion
+- **Central (Urgent):** Cap all discounts at 15% immediately; eliminate Furniture discounts entirely; shift focus from Consumer (3.4% margin) to Corporate (11.8%) and B2B
 
-**Tools:** Python (Pandas, Matplotlib, Seaborn, SciPy) · Tableau Public  
-**Dataset:** Sample Superstore · 9,994 rows · 13 features · 2014–2017  
-**Key Skills:** EDA, Statistical Testing, Data Visualization, Dashboard Design, Business Storytelling
+**Bottom line:** A 54% profit improvement opportunity exists — without acquiring a single new customer.
+
+## Tools Used
+Tableau Public · Python (EDA) · Calculated Fields · Heatmap · Scatter Plot · Slope Chart
+
+---
+*Part of the Data Analytics Bootcamp portfolio (2026)*
